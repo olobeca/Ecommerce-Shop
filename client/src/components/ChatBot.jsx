@@ -13,7 +13,7 @@ function ChatBot() {
             <h2>ChatBot</h2>
             <div class="border border-primary rounded p-3 border-lime-300">
                 <div>
-                    <p class="p">{` ${user} Witaj! Jak mogę Ci pomóc?`}</p>
+                    <p class="p">{`  Witaj ${user}! Jak mogę Ci pomóc?`}</p>
                 </div>
             </div>
             <input class="input" type="text" placeholder="Napisz wiadomość..." />
