@@ -23,6 +23,7 @@ function Login() {
         price: "",
         description: "",
         imageUrl: "",
+        colors: "",
     });
 
     const [cattegory, setCattegory] = useState({
@@ -164,6 +165,12 @@ function Login() {
         setItem((i) => ({ ...i, imageUrl: event.target.value }));
     }
 
+    function handleColorChange(event) {
+        setItem((i) => ({ ...i, colors: event.target.value }));
+    }
+
+
+
     function handleAddItem() {
         if (!credentials._id) {
             console.error("Brak ID użytkownika. Nie można dodać przedmiotu.");
@@ -190,6 +197,7 @@ function Login() {
             price: "",
             description: "",
             imageUrl: "",
+            colors: "",
         });
     }
 
@@ -472,6 +480,13 @@ function Login() {
                                 placeholder="imageUrl"
                                 value={item.imageUrl}
                                 onChange={handleImageUrlChange}
+                                className="input"
+                            ></input>
+                            <input
+                                type="text"
+                                placeholder="color"
+                                value={item.colors}
+                                onChange={handleColorChange}
                                 className="input"
                             ></input>
                             <button onClick={handleAddItem} className="btn">

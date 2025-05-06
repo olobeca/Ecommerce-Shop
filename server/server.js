@@ -85,9 +85,9 @@ app.post('/api/produkt', async (req, res) => {
     console.log('Otrzymane dane:', req.body); // Debugowanie danych
 
     try {
-        const { title, price, description, imageUrl, creatorUserId } = req.body;
+        const { title, price, description, imageUrl, creatorUserId, colors } = req.body;
 
-        const newItem = new produkt({ title, price, description, imageUrl, creatorUserId });
+        const newItem = new produkt({ title, price, description, imageUrl, creatorUserId, colors });
         console.log('Tworzenie nowego przedmiotu:', newItem); // Debugowanie danych    
         await newItem.save();
         console.log('Przedmiot dodany:', newItem);
