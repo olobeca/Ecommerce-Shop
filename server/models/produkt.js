@@ -9,6 +9,7 @@ const ProduktSchema = new Schema({
     creationDate: {type: Date, default: Date.now},
     isAvailable: {type: Boolean, default: true},
     creatorUserId: {type:Schema.Types.ObjectId, ref: 'Uzytkownik', required: false}, 
+    colors: [{type: String, required: false}],
     
 }) 
 

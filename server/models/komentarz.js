@@ -8,5 +8,6 @@ const komentarzSchema = new Schema({
     creationDate: {type: Date, default: Date.now},
     creatorUserId: {type:Schema.Types.ObjectId, ref: 'Uzytkownik', required: true},
     isDeleted: {type: Boolean, default: false},
+    
 })
 module.exports = mongoose.model('Komentarz', komentarzSchema);
